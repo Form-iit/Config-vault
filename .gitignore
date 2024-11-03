@@ -1,0 +1,26 @@
+# Ignore IntelliJ IDEA project files
+.idea/
+*.iml
+
+#Ignore vscode project files
+.vscode/
+
+# Ignore local configuration files
+*.local.yml
+*.local-docker.yml
+*.dev.yml
+*.dev-docker.yml
+
+# Ignore environment variable files
+.env
+.env.local
+.env.dev
+.env.local.docker
+.env.dev.docker
+
+# Ignore log files
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
