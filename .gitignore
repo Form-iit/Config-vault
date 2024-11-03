@@ -6,10 +6,10 @@
 .vscode/
 
 # Ignore local configuration files
-*.local.yml
-*.local-docker.yml
-*.dev.yml
-*.dev-docker.yml
+*-local.yml
+*-local-docker.yml
+*-dev.yml
+*-dev-docker.yml
 
 # Ignore environment variable files
 .env
