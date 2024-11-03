@@ -1,0 +1,53 @@
+#JWT
+auth:
+    jwt:
+        secret-key: ${JWT_SECRET}
+
+spring:
+    # DataSource settings for postgresql
+    datasource:
+        url: ${DB_URL}
+        username: ${DB_USERNAME}
+        password: ${DB_PASSWORD}
+    # Hibernate settings
+    jpa:
+        hibernate:
+            ddl-auto: update
+        show-sql: true
+        database-platform: ${DB_PLATFORM}
+
+    # RabbitMQ settings
+    rabbitmq:
+        host: ${RABBITMQ_HOST}
+        port: ${RABBITMQ_PORT}
+        username: ${RABBITMQ_USERNAME}
+        password: ${RABBITMQ_PASSWORD}
+
+# Logging settings
+logging:
+    level:
+        root: WARN
+        com.example.authservice: TRACE
+        org.springframework.security: ERROR
+
+# Server settings
+server:
+    port: ${SERVER_PORT}
+
+# Actuator settings
+management:
+    endpoints:
+        web:
+            exposure:
+                include: "*"
+    endpoint:
+        health:
+            show-details: "always"
+
+# Eureka settings
+eureka:
+    client:
+        registerWithEureka: true
+        fetchRegistry: true
+        service-url:
+            defaultZone: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE}
