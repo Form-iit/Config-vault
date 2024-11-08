@@ -1,20 +1,20 @@
 #JWT
 auth:
     jwt:
-        secret-key: ${JWT_SECRET}
+        secret-key: ${AUTH_JWT_SECRET-KEY}
 
 spring:
     # DataSource settings for postgresql
     datasource:
-        url: ${DB_URL}
-        username: ${DB_USERNAME}
-        password: ${DB_PASSWORD}
+        url: ${SPRING_DATASOURCE_URL}
+        username: ${SPRING_DATASOURCE_USERNAME}
+        password: ${SPRING_DATASOURCE_PASSWORD}
     # Hibernate settings
     jpa:
         hibernate:
-            ddl-auto: update
+            ddl-auto: ${SPRING_JPA_HIBERNATE_DLL-AUTO}
         show-sql: true
-        database-platform: ${DB_PLATFORM}
+        database-platform: ${SPRING_JPA_DATABASE-PLATFORM}
 
     # RabbitMQ settings
     rabbitmq:
