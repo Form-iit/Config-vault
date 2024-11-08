@@ -14,7 +14,8 @@ spring:
         hibernate:
             ddl-auto: ${SPRING_JPA_HIBERNATE_DLL-AUTO}
         show-sql: true
-        database-platform: ${SPRING_JPA_DATABASE-PLATFORM}
+        properties:
+            hibernate-dialect: ${SPRING_JPA_PROPERTIES_HIBERNATE-DIALECT}
 
     # RabbitMQ settings
     rabbitmq:
