@@ -47,3 +47,10 @@ management:
   endpoint:
     health:
       show-details: "always"
+
+eureka:
+    client:
+        registerWithEureka: true
+        fetchRegistry: true
+        service-url:
+            defaultZone: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE}
