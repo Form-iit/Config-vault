@@ -23,6 +23,12 @@ spring:
         port: ${RABBITMQ_PORT}
         username: ${RABBITMQ_USERNAME}
         password: ${RABBITMQ_PASSWORD}
+        exchange:
+            name: ${SPRING_RABBITMQ_EXCHANGE_NAME}
+        routing:
+            key: ${SPRING_RABBITMQ_ROUTING_KEY}
+        queue:
+            name: ${SPRING_RABBITMQ_QUEUE_NAME}
 
 # Logging settings
 logging:
