@@ -31,9 +31,8 @@ resilience4j.retry:
       waitDuration: ${RESILIENCE4J_RETRY_INSTANCES_EMAILSERVICE_WAITDURATION}
       retryExceptions:
         - org.springframework.mail.MailException
-      exponentialBackoff:
-        enabled: ${RESILIENCE4J_RETRY_INSTANCES_EMAILSERVICE_EXPONENTIALBACKOFF_ENABLED}
-        multiplier: ${RESILIENCE4J_RETRY_INSTANCES_EMAILSERVICE_EXPONENTIALBACKOFF_MULTIPLIER}
+      enable-exponential-backoff: ${RESILIENCE4J_RETRY_INSTANCES_EMAILSERVICE_EXPONENTIALBACKOFF_ENABLED}
+      exponential-backoff-multiplier: ${RESILIENCE4J_RETRY_INSTANCES_EMAILSERVICE_EXPONENTIALBACKOFF_MULTIPLIER}
 #Logging settings
 logging:
   level:
