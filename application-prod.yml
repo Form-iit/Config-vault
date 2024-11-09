@@ -43,13 +43,14 @@ server:
 
 # Actuator settings
 management:
-    endpoints:
-        web:
-            exposure:
-                include: "*"
-    endpoint:
-        health:
-            show-details: "always"
+  endpoints:
+    web:
+      exposure:
+        include: health, info, refresh, env
+      base-path: /actuator
+  endpoint:
+    health:
+      show-details: "always"
 
 # Eureka settings
 eureka:
