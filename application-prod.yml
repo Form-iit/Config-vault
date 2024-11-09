@@ -20,6 +20,7 @@ spring:
 # Server settings
 server:
   port: ${SERVER_PORT}
+  protocol: ${SERVER_PROTOCOL}
 # Resilience4j settings (retries)
 resilience4j.retry:
   instances:
@@ -37,12 +38,12 @@ logging:
     org.springframework: ERROR
     com.example.mailingservice: TRACE
 # Actuator settings
-# Actuator settings
 management:
   endpoints:
     web:
       exposure:
-        include: "*"
+        include: health, info, refresh, env
+      base-path: /actuator
   endpoint:
     health:
       show-details: "always"
