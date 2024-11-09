@@ -19,10 +19,10 @@ spring:
     
     # RabbitMQ settings
     rabbitmq:
-        host: ${RABBITMQ_HOST}
-        port: ${RABBITMQ_PORT}
-        username: ${RABBITMQ_USERNAME}
-        password: ${RABBITMQ_PASSWORD}
+        host: ${SPRING_RABBITMQ_HOST}
+        port: ${SPRING_RABBITMQ_PORT}
+        username: ${SPRING_RABBITMQ_USERNAME}
+        password: ${SPRING_RABBITMQ_PASSWORD}
         exchange:
             name: ${SPRING_RABBITMQ_EXCHANGE_NAME}
         routing:
