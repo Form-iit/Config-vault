@@ -59,3 +59,10 @@ eureka:
         fetchRegistry: true
         service-url:
             defaultZone: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE}
+
+#Swagger/Swagger-ui
+springdoc:
+    api-docs:
+        path: ${SPRINGDOC_API_DOCS_PATH}
+    swagger-ui:
+        path: ${SPRINGDOC_SWAGGER_UI_PATH}
