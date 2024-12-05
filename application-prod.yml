@@ -19,7 +19,6 @@ spring:
                     filters:
                         - PrefixPath=/api/v1
                         - AddResponseHeader=X-Powered-By,APIGatewayService
-                        -   name: JwtValidationFilter
         discovery:
             enabled: true
 
