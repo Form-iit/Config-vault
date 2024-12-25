@@ -31,7 +31,6 @@ eureka:
         fetch-registry: true
     instance:
         prefer-ip-address: true
-        hostname: ${EUREKA_INSTANCE_HOSTNAME}
         ip-address: ${EUREKA_INSTANCE_IP_ADDRESS} # Your service's IP
 
 management:
